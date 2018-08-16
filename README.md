@@ -54,9 +54,13 @@ may not work this way. If you have Anaconda, you can manually install feather
 first by typing `conda install feather-format -c conda-forge`
 and then re-run the `pip install` command.
 
-Also note that these scripts were all written for python2. I don't think there
-should be any backward-incompatible portions, so python3 **might** work, but
-no promises.
+Also note that these scripts were all written for python2 in a Unix environment. There are some backward-incompatible portions as-is, so python3 **might** work if you dig around (specifically with `feather` and `pyarrow`). If you are having trouble getting the environment working do the following from a conda Python 2.7 environment:
+
+`conda install requests==2.13.0 pandas==0.19.2 numpy==1.11.1 statsmodels==0.6.1 scipy==0.18.1  matplotlib==1.5.1 seaborn==0.8 PyYAML==3.12`
+
+`pip install scikit_learn==0.19.0 dendropy==4.3.0 scikit_bio==0.4.2`
+
+`conda install feather-format==0.3.1 -c conda-forge`
 
 You also need to install the NCBI EDirect command line tools for making
 the tree. Instructions on how to do that are on the NCBI
